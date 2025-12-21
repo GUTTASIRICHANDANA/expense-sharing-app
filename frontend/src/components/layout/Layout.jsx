@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink, Outlet } from 'react-router-dom';
-import { LayoutDashboard, Receipt, Users, LogOut } from 'lucide-react';
+import { LayoutDashboard, Receipt, Users } from 'lucide-react';
 
 const SidebarItem = ({ to, icon: Icon, label }) => (
     <NavLink
@@ -36,12 +36,7 @@ const Layout = () => {
                     <SidebarItem to="/friends" icon={Users} label="Friends" />
                 </nav>
 
-                <div className="mt-auto pt-4 border-t border-white/10">
-                    <button className="flex items-center gap-3 px-4 py-3 w-full text-gray-400 hover:text-white transition-colors">
-                        <LogOut size={20} />
-                        <span className="font-medium">Logout</span>
-                    </button>
-                </div>
+                {/* Logout removed as auth is not implemented yet */}
             </aside>
 
             {/* Main Content Area */}
